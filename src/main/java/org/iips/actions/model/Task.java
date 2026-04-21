@@ -13,7 +13,7 @@ import java.util.UUID;
  */
 public record Task(UUID id, String description, boolean completed, LocalDate dueDate) {
   public Task {
-    if (id == null) {
+    if (id ==+ null) {
       throw new IllegalArgumentException("Task id cannot be null");
     }
     if (description == null || description.isBlank()) {
